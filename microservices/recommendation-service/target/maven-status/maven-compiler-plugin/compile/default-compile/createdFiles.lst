@@ -1,0 +1,14 @@
+com/example/recommendation/service/config/WebConfig.class
+com/example/recommendation/service/web/dto/RecommendationDTO.class
+com/example/recommendation/service/persistence/repository/RecommendationRepository.class
+com/example/recommendation/service/web/controller/IRecommendationController.class
+com/example/recommendation/service/mapper/RecommendationMapperImpl.class
+com/example/recommendation/service/RecommendationServiceApplication.class
+com/example/recommendation/service/service/impl/RecommendationService.class
+com/example/recommendation/service/web/exceptions/InvalidInputException.class
+com/example/recommendation/service/web/exceptions/NotFoundException.class
+com/example/recommendation/service/service/IRecommendationService.class
+com/example/recommendation/service/config/WebClientConfig.class
+com/example/recommendation/service/mapper/RecommendationMapper.class
+com/example/recommendation/service/web/controller/impl/RecommendationController.class
+com/example/recommendation/service/persistence/model/Recommendation.class

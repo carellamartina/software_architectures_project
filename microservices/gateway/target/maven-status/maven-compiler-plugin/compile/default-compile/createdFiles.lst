@@ -1,0 +1,11 @@
+com/example/gateway/web/dto/ProductDTO.class
+com/example/gateway/config/WebConfig.class
+com/example/gateway/web/exceptions/InvalidInputException.class
+com/example/gateway/web/dto/ReviewDTO.class
+com/example/gateway/web/controller/impl/UIController.class
+com/example/gateway/config/WebClientConfig.class
+com/example/gateway/GatewayApplication.class
+com/example/gateway/web/controller/IUIController.class
+com/example/gateway/web/exceptions/NotFoundException.class
+com/example/gateway/web/exceptions/UnprocessableEntityException.class
+com/example/gateway/web/dto/RecommendationDTO.class
