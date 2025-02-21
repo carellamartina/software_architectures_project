@@ -17,7 +17,7 @@ Each implementation demonstrates how different architectures can impact the inte
 ## Project Structure
 
 ```
-code/
+software_architectures_project/
 ├── clean-monolith/           # Clean Monolithic architecture implementation
 ├── layered-monolith/         # Layered Monolithic architecture implementation
 ├── modular-monolith/         # Modular Monolithic architecture implementation
@@ -70,7 +70,69 @@ Despite the differences in architecture, all implementations share the same stru
 - POST: /products/{productId}/reviews
 - DELETE: /products/{productId}/reviews/{reviewId}
 
-### Integrating Thymeleaf into a Spring Boot Project
+## How to Run the 3 Monolithic Applications
+
+### Prerequisites
+
+- **Java 21**
+- **Maven** (for managing dependencies and building the project)
+
+### Steps to Run the Applications
+
+#### 1. Navigate to the directory of the application
+example:
+```
+cd clean-monolith
+```
+#### 2. Build the application using Maven
+```
+mvn package
+```
+This will compile and package the application
+
+#### 3. Run the application
+```
+mvn spring-boot:run
+```
+The application should now be running and accessible at http://localhost:8080.
+
+## How to Run the Microservices Application
+
+### Prerequisites
+
+- **Java 21**
+- **Maven** (for managing dependencies and building the project)
+- **Docker** (for running the application using Docker containers)
+- **Docker Compose** (for orchestrating multi-container Docker applications)
+
+### Steps to Run the Application
+
+#### 1. Navigate to the directory of the service
+example:
+```
+cd clean-monolith
+```
+
+#### 2. Build the application using Maven
+```
+mvn package
+```
+Perform these first two steps for all the services that make up the application (product, review, recommendation, registry and gateway)
+
+#### 3. Build and start all services using Docker Compose
+Navigate to the root directory of the project
+```
+docker compose up --build
+```
+
+#### 4. Viewing Services in Eureka
+After starting the services, you can view their registration on Eureka Server by visiting the following URL in your browser: http://localhost:8761 .
+
+Please wait for a few seconds for all services to register. Once the registration is complete, you should see Product Service, Review Service, Recommendation Service and Gateway listed on the Eureka dashboard.
+
+The application should now be running and accessible at http://localhost:8080.
+
+## Integrating Thymeleaf into a Spring Boot Project
 
 To integrate **Thymeleaf** into the Spring Boot project, the following steps were executed:
 
@@ -93,6 +155,7 @@ To integrate **Thymeleaf** into the Spring Boot project, the following steps wer
 3. **Created Thymeleaf Templates**
 
    The .html template files were placed in the `src/main/resources/templates` directory.
+
 
 4. **Implemented a Controller**
 
